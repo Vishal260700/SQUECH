@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squech</title>
+  <link rel="stylesheet" type="text/css" href="../style/main.css">
+  <link rel="stylesheet" type="text/css" href="../style/contact.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+ <div class="header">
+ 	<div class="container" style="margin-left: 48%;">
+  <a href="#" class="logo"><img src="../public/logo.jpg" style="height:46px;margin:5px;"></a>
+</div>
+</div>
+<div style="float: left;">
+  <ul id="navbar">
+    <li><i class="fa fa-home" aria-hidden="true"></i><a href="dashboard.html">Dashboard</a></li>
+    <li><i class="fa fa-user" aria-hidden="true"></i><a href="Profile.html">Profile</a></li>
+    <li><i class="fa fa-users" aria-hidden="true"></i><a href="managment2.html">Account Management</a></li>
+    <li><i class="fa fa-list" aria-hidden="true"></i><a href="managment1.html">Room Managment</a></li>
+    <li><i class="fa fa-envelope-open" aria-hidden="true"></i><a href="#">Approve Listings</a></li>
+    <li><i class="fa fa-file-text" aria-hidden="true"></i><a href="#">Generate Report</a></li>
+    <li><i class="fa fa-paypal" aria-hidden="true"></i><a href="managment3.html">Payment Managment</a></li>
+    <li><i class="fa fa-area-chart" aria-hidden="true"></i><a href="managment4.html">Area Managment</a></li>
+    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="contact.html">Contact Team</a></li>
+    <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="refferal.html">Referal Code</a></li>
+    <li><i class="fa fa-chain-broken" aria-hidden="true"></i><a href="#">Coupon Code</a></li>
+    <li><i class="fa fa-cogs" aria-hidden="true"></i><a href="#">Settings</a></li>
+  </ul>
+</div>
+<div class="container" style="margin-left: 23%;margin-top: 3%;">
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Query Form</h3>
+        <ul>
+          <li><i class="fa fa-phone"></i> (+91)-9413605678</li>
+          <li><i class="fa fa-envelope"></i>SQUECH@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact" name="contact">
+        <h3>Email Us</h3>
+        <form method="POST" action="send">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name">
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email">
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

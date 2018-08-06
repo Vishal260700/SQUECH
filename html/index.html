@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Squech</title>
+		<link rel="stylesheet" type="text/css" href="../style/main.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				font-family: Calibri, sans-serif;
+			}
+
+		  tr td input{
+		    background:#85C1E9 ;
+		    border:none;
+		    border-radius: 5px;
+		    width: 100%;
+		    color: white;
+		  }
+		</style>
+	</head>
+	<body>
+
+		<div class="background-wrap">
+			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+				<source src="../public/video.mp4" type="video/mp4">
+				Video not supported
+			</video>          
+		</div>
+
+		<div class="content">         
+			<div class="col-md-12">
+			  <div class="col-md-4" style="margin-left: 44%;margin-top: 15%;">
+			    <img src="../public/logo.jpg" style="width: 31%;">
+			  </div>
+			  <div class="col-md-4" style="margin-left: 43%;">
+			    <button data-target = "#login" data-toggle = "modal" class="btn btn-info" style="width: 38%;margin-top: 2%;">Login</button>
+			  </div>
+			  <div class="col-md-4" style="margin-left: 43%;">
+			    <button data-target = "#register" data-toggle = "modal" class="btn btn-danger" style="width: 38%;margin-top: 2%;">Register</button>
+			  </div>
+			</div>
+		</div>
+
+<!--Login Form here-->
+<div class="modal fade" id="login" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background:#3498DB;color: white; ">
+                <h4 class="modal-title">Account Login</h4>
+              </div>
+              <div class="modal-body">
+            <section class="login">
+            <form action="/login" method="post">
+              <table class="table">
+                <tr>
+                  <td>Username</td>
+                  <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                  <td>Password</td>
+                  <td><input type="password" name="password"></td>
+                </tr>
+              </table>
+            <button type="submit" class="btn btn-block" style="background: #3498DB;color: white;">SUBMIT</button>
+            </form>
+            <button data-target = "#forgotpass" data-toggle = "modal" style="background:none;border:none;margin-top: 5px;color:red;">Forgot Password?</button>
+            <button data-target = "#register" data-toggle = "modal" style="background:none;border:none;margin-top: 5px;color: green;float: right;">New User Register Here!</button>
+            </section>
+              </div>
+            </div>
+          </div>
+</div>
+
+<!--forgot password form here-->
+
+<div id="forgotpass" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">Forgot Password</h4>
+      </div>
+      <div class="modal-body">
+        <h6>Enter your Mail id or Mobile Number ,and we will send your password</h6>
+        <form action="#" method="post">
+          <table class="table">
+            <tr>
+              <td>Username</td>
+              <td><input type="text" name="username" style="width: 100%;"></td>
+            </tr>
+            <tr>
+              <td>Phone Number / Mail Id</td>
+              <td><input type="text" name="info" style="width: 100%;"></td>
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-block" style="background: #58D68D;color: white;margin-top: 5px;float: left;">Resent Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Register Form here-->
+     <div class="modal fade" id="register" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background:#3498DB;color: white; ">
+                <h4 class="modal-title">Account Register</h4>
+              </div>
+              <div class="modal-body">
+            <section class="register">
+            <form action="/register" method="post">
+              <table class="table">
+                <tr>
+                  <td>Username</td>
+                  <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                  <td>Mail ID</td>
+                  <td><input type="text" name="mail"></td>
+                </tr>
+                <tr>
+                  <td>Contact info</td>
+                  <td><input type="text" name="phone"></td>
+                </tr>
+                <tr>
+                  <td>Your Description</td>
+                  <td><input type="text" name="about"></td>
+                </tr>
+                <tr>
+                  <td>Company</td>
+                  <td><input type="text" name="company"></td>
+                </tr>
+                <tr>
+                  <td>Password</td>
+                  <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                  <td>Confirm-Password</td>
+                  <td><input type="password" name="password2"></td>
+                </tr>
+              </table>
+            <button type="submit" class="btn btn-block" style="background: #3498DB;color: white;">SUBMIT</button>
+            </form>
+            </section>
+              </div>
+            </div>
+          </div>
+        </div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

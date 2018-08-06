@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Username : Room Managment</title> <!--username will be rendered the node-express on the basis of view engine-->
+  <link rel="stylesheet" type="text/css" href="../style/main.css">
+  <link rel="stylesheet" type="text/css" href="../style/contact.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style type="text/css">
+    td,th{
+      text-align: center;
+    }
+    tr button{
+      background: #5DADE2;
+      border-radius: 10px 0;
+      border:none;
+      color: white;
+    }
+    input{
+      background: #85C1E9;
+      border:none;
+      border-radius: 5px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+ <div class="header">
+ 	<div class="container" style="margin-left: 48%;">
+  <a href="#" class="logo"><img src="../public/logo.jpg" style="height:46px;margin:5px;"></a>
+</div>
+</div>
+<div style="float: left;">
+  <ul id="navbar">
+    <li><i class="fa fa-home" aria-hidden="true"></i><a href="dashboard.html">Dashboard</a></li>
+    <li><i class="fa fa-user" aria-hidden="true"></i><a href="Profile.html">Profile</a></li>
+    <li><i class="fa fa-users" aria-hidden="true"></i><a href="managment2.html">Account Management</a></li>
+    <li><i class="fa fa-list" aria-hidden="true"></i><a href="managment1.html">Room Managment</a></li>
+    <li><i class="fa fa-envelope-open" aria-hidden="true"></i><a href="#">Approve Listings</a></li>
+    <li><i class="fa fa-file-text" aria-hidden="true"></i><a href="#">Generate Report</a></li>
+    <li><i class="fa fa-paypal" aria-hidden="true"></i><a href="managment3.html">Payment Managment</a></li>
+    <li><i class="fa fa-area-chart" aria-hidden="true"></i><a href="managment4.html">Area Managment</a></li>
+    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="contact.html">Contact Team</a></li>
+    <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="refferal.html">Referal Code</a></li>
+    <li><i class="fa fa-chain-broken" aria-hidden="true"></i><a href="#">Coupon Code</a></li>
+    <li><i class="fa fa-cogs" aria-hidden="true"></i><a href="#">Settings</a></li>
+  </ul>
+</div>
+<div class="container" style="float: right;margin-right: 4%;">
+  <div class="col-md-12">
+    <h1 style="text-align: center; margin-top: 2%;">Room Management</h1>
+  </div>
+  <div class="col-md-12">
+    <table class="table" style="border:1px solid #D7DBDD;box-shadow: 0 0 10px black;margin-top: 20px;"><!--here the data for each tr and td will be retrieved from db via node(express) using view engine preferably ejs-->
+    <tr style="background: #F2F3F4;">
+      <th>S.No</th>
+      <th>Room Name</th>
+      <th>Type</th>
+      <th>Amenities</th>
+      <th>Seating Capacity</th>
+      <th>View</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Room 1</td>
+      <td>Double</td>
+      <td>Wifi Bar</td>
+      <td>12</td>
+      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Room 1</td>
+      <td>Double</td>
+      <td>Wifi Bar</td>
+      <td>12</td>
+      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Room 1</td>
+      <td>Double</td>
+      <td>Wifi Bar</td>
+      <td>12</td>
+      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
+    </tr>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-danger" data-target = "#Room" data-toggle = "modal">Add Room</button>
+  </div>
+  </div>
+</div>
+<div id="Room" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">Add Room</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <table class="table"><!--Schema for name are "r" + "attribute of room" -->
+            <tr>
+              <td>Room Image</td>
+              <td><input type="file" name="rimage"></td>
+            </tr>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="rname"></td>
+            </tr>
+            <tr>
+              <td>Type</td>
+              <td><input type="text" name="rtype"></td>
+            </tr>
+            <tr>
+              <td>Seating Capacity</td>
+              <td><input type="text" name="rcapacity"></td>
+            </tr>
+            <tr>
+              <td>Charges</td>
+              <td><input type="text" name="rcharges"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

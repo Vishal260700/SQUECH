@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Squech</title>
+  <link rel="stylesheet" type="text/css" href="../style/main.css">
+  <link rel="stylesheet" type="text/css" href="../style/contact.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <style type="text/css">
+    tr td input{
+      background: #85C1E9;
+      color: white;
+      border-radius: 5px;
+      border:none;
+    }
+  </style>
+</head>
+<body>
+ <div class="header">
+ 	<div class="container" style="margin-left: 48%;">
+  <a href="#" class="logo"><img src="../public/logo.jpg" style="height:46px;margin:5px;"></a>
+</div>
+</div>
+<div style="float: left;">
+  <ul id="navbar">
+    <li><i class="fa fa-home" aria-hidden="true"></i><a href="dashboard.html">Dashboard</a></li>
+    <li><i class="fa fa-user" aria-hidden="true"></i><a href="Profile.html">Profile</a></li>
+    <li><i class="fa fa-users" aria-hidden="true"></i><a href="#">Account Management</a></li>
+    <li><i class="fa fa-list" aria-hidden="true"></i><a href="managment1.html">Room Managment</a></li>
+    <li><i class="fa fa-envelope-open" aria-hidden="true"></i><a href="#">Approve Listings</a></li>
+    <li><i class="fa fa-file-text" aria-hidden="true"></i><a href="#">Generate Report</a></li>
+    <li><i class="fa fa-paypal" aria-hidden="true"></i><a href="managment3.html">Payment Managment</a></li>
+    <li><i class="fa fa-area-chart" aria-hidden="true"></i><a href="managment4.html">Area Managment</a></li>
+    <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="contact.html">Contact Team</a></li>
+    <li><i class="fa fa-pencil-square-o" aria-hidden="true"></i><a href="refferal.html">Referal Code</a></li>
+    <li><i class="fa fa-chain-broken" aria-hidden="true"></i><a href="#">Coupon Code</a></li>
+    <li><i class="fa fa-cogs" aria-hidden="true"></i><a href="#">Settings</a></li>
+  </ul>
+</div>
+<div class="col-md-8" style="float: right;margin-right: 8%;margin-top: 5%;">
+        <div class="col-md-6" style="margin-top: 15px;float: left;">
+          <img src="../public/vishal.jpg" style="width:100%; border-radius: 10px;">
+          <button class="btn btn text-center" style="width: 100%;background: #3498DB;color: white;margin-top: 10px;" data-toggle="modal" data-target="#update">Edit Details</button>
+        </div>
+        <div class="col-md-6" style="margin-top: 15px;float: right;">
+          <ul class="list-group">
+            <li class="list-group-item"><i class="fa fa-user" style="margin:8px;"></i>Name : Vishal Agarwal</li>
+            <li class="list-group-item"><i class="fa fa-envelope" style="margin:8px;"></i>E-mail ID : vishal260700@gmail.com</li>
+            <li class="list-group-item"><i class="fa fa-phone-square" style="margin:8px;"></i>Contact info : 9413605678</li>
+            <li class="list-group-item"><i class="fa fa-pencil-square-o" style="margin:8px;"></i>Designation : Student</li>
+            <li class="list-group-item"><i class="fa fa-building" style="margin:8px;"></i>Company : IIT Kanpur</li>
+            <li class="list-group-item"><i class="fa fa-info-circle" style="margin:8px;"></i>About : Coder</li>
+          </ul>
+        <button class="btn btn text-center" style="width: 100%;background: #3498DB;color: white;margin-top: 10px;" data-toggle="modal" data-target="#newpass">Change Password</button>
+        </div>
+      </div>
+      <div class="modal fade" id="update" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="background:#3498DB;color: white; ">
+                <h4 class="modal-title">Edit Details</h4>
+              </div>
+              <div class="modal-body">
+            <section class="update">
+            <form action="/update" method="post">
+              <table class="table">
+                    <tr class="input">
+                        <td><label for="phone">Phone Number</label></td>
+                        <td><input type="text" id="phone" name="phone"></td>
+                    </tr>
+                    <tr class="input">
+                        <td><label for="mail">Mail</label></td>
+                        <td><input type="text" id="mail" name="mail"></td>
+                    </tr>
+                    <tr class="input">
+                        <td><label for="designation">Designation</label></td>
+                        <td><input type="text" id="designation" name="designation"></td>
+                    </tr>
+                    <tr class="input">
+                        <td><label for="cc">College/Company</label></td>
+                        <td><input type="text" id="cc" name="cc"></td>
+                    </tr>
+                     <tr class="input">
+                        <td><label for="about">About</label></td>
+                        <td><input type="text" id="about" name="about"></td>
+                    </tr>
+                     <tr class="input">
+                        <td><label for="accomplishments">Accomplishments</label></td>
+                        <td><input type="text" id="accomplishments" name="accomplishments"></td>
+                    </tr>
+            </table>
+            <button type="submit" class="btn btn-block" style="background: #3498DB;color: white;">SUBMIT</button>
+          </form>
+            </section>
+              </div>
+            </div>
+          </div>
+        </div>
+  <div id="newpass" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">Reset Password</h4>
+      </div>
+      <div class="modal-body">
+        <center>
+        <h5>Create a new strong password</h5>
+      </center>
+        <form action="#" method="post">
+          <table class="table">
+            <tr>
+              <td>Username</td>
+              <td><input type="text" name="username" style="width: 100%;background: #85C1E9;border-radius: 5px;border:none;color: white;"></td>
+            </tr>
+            <tr>
+              <td>Old Password</td>
+              <td><input type="password" name="oldpass" style="width: 100%;background: #85C1E9;border-radius: 5px;border:none;color: white;"></td>
+            </tr>
+            <tr>
+              <td>Create Password</td>
+              <td><input type="password" name="newpass" style="width: 100%;background: #85C1E9;border-radius: 5px;border:none;color: white;"></td>
+            </tr>
+            <tr>
+              <td>Confirm Password</td>
+              <td><input type="password" name="newpass2" style="width: 100%;background: #85C1E9;border-radius: 5px;border:none;color: white;"></td>
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-block" style="background: #58D68D;color: white;margin-top: 5px;float: left;">Change Password</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
