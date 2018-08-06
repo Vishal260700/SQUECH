@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Username : Payment Managment</title> <!--username will be rendered the node-express on the basis of view engine-->
+	<title>Username : Coupon Codes</title> <!--username will be rendered the node-express on the basis of view engine-->
   <link rel="stylesheet" type="text/css" href="../style/main.css">
-  <link rel="stylesheet" type="text/css" href="../style/contact.css">
   <link rel="shortcut icon" type="image/jpg" href="../public/logo.jpg">
+  <link rel="stylesheet" type="text/css" href="../style/contact.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -25,6 +25,7 @@
       border:none;
       border-radius: 5px;
       width: 100%;
+      color: white;
     }
   </style>
 </head>
@@ -51,36 +52,72 @@
 </div>
 <div class="container" style="float: right;margin-right: 4%;">
   <div class="col-md-12">
-    <h1 style="text-align: center; margin-top: 2%;">Payment Management</h1>
+    <h1 style="text-align: center; margin-top: 2%;">Coupon Codes</h1>
   </div>
   <div class="col-md-12">
     <table class="table" style="border:1px solid #D7DBDD;box-shadow: 0 0 10px black;margin-top: 20px;"><!--here the data for each tr and td will be retrieved from db via node(express) using view engine preferably ejs-->
     <tr style="background: #F2F3F4;">
       <th>S.No</th>
-      <th>Name</th>
-      <th>E-mail ID</th>
-      <th>Contact No.</th>
-      <th>Transaction ID</th>
-      <th>Amount</th>
-      <th>Commission</th>
-      <th>VAT</th>
-      <th>Status</th>
-      <th>Date & Time</th>
+      <th>Code Name</th>
+      <th>Applicable From</th>
+      <th>Applicable Till</th>
+      <th>Code</th>
+      <th>Terms and Conditions</th>
+      <th>Actions</th>
     </tr>
     <tr>
       <td>1</td>
       <td>ABC</td>
-      <td>ABC</td>
-      <td>98989898989</td>
-      <td>ABCDEF</td>
-      <td>200</td>
-      <td>10</td>
-      <td>5</td>
-      <td>ABC</td>
-      <td>8/03/2018 13:30</td>
+      <td>12/04/2018</td>
+      <td>26/07/2018</td>
+      <td>Yes</td>
+      <td>ABCDEFGHI</td>
+      <td><button class="btn" style="background: #3498DB;margin-right: 5px;">Edit</button><button class="btn btn-danger" style="margin-right: 5px;">Delete</button></td>
     </tr>
     </table>
   </div>
+  <div class="col-md-4">
+    <button class="btn btn-danger" data-target = "#Code" data-toggle = "modal">Add Code</button>
+  </div>
+  </div>
+</div>
+
+<!--modal for adding area starts here-->
+
+<div id="Code" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">Add Room</h4>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="post">
+          <table class="table"><!--Schema for name are "a" + "attribute of code" -->
+            <tr>
+              <td>Refferal Code Name</td>
+              <td><input type="text" name="aname"></td>
+            </tr>
+            <tr>
+              <td>Applicable From</td>
+              <td><input type="date" name="afrom"></td>
+            </tr>
+            <tr>
+              <td>Applicable Till</td>
+              <td><input type="date" name="atill"></td>
+            </tr>
+            <tr>
+              <td>Code</td>
+              <td><input type="text" name="acode"></td>
+            </tr>
+            <tr>
+              <td>Terms and Conditions</td>
+              <td><input type="text" name="abonus"></td>
+            </tr>
+          </table>
+          <button type="submit" class="btn btn-block" style="background: #58D68D;color: white;">Submit</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 </body>
