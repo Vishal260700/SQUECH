@@ -25,6 +25,7 @@
       border:none;
       border-radius: 5px;
       width: 100%;
+      color: white;
     }
   </style>
 </head>
@@ -69,23 +70,7 @@
       <td>Double</td>
       <td>Wifi Bar</td>
       <td>12</td>
-      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Room 1</td>
-      <td>Double</td>
-      <td>Wifi Bar</td>
-      <td>12</td>
-      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Room 1</td>
-      <td>Double</td>
-      <td>Wifi Bar</td>
-      <td>12</td>
-      <td><button><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
+      <td><button data-target = "#view" data-toggle = "modal"><i class="fa fa-arrow-circle-right" aria-hidden="true" style="font-size: 1.5em;"></i></button></td>
     </tr>
     </table>
   </div>
@@ -108,12 +93,24 @@
               <td><input type="file" name="rimage"></td>
             </tr>
             <tr>
+              <td>Available From Time</td>
+              <td><input type="time" name="rfrom"></td>
+            </tr>
+            <tr>
+              <td>Available Till Time</td>
+              <td><input type="time" name="rtill"></td>
+            </tr>
+            <tr>
               <td>Name</td>
               <td><input type="text" name="rname"></td>
             </tr>
             <tr>
               <td>Type</td>
               <td><input type="text" name="rtype"></td>
+            </tr>
+            <tr>
+              <td>Amenities</td>
+              <td><input type="text" name="ramenities"></td>
             </tr>
             <tr>
               <td>Seating Capacity</td>
@@ -123,8 +120,76 @@
               <td>Charges</td>
               <td><input type="text" name="rcharges"></td>
             </tr>
+            <tr>
+              <td>Terms and Conditions</td>
+              <td><input type="text" name="rterms"></td>
+            </tr>
+            <tr>
+              <td>Room Description</td>
+              <td><input type="text" name="rdescription"></td>
+            </tr>
           </table>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="view" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">Room Name</h4><!-- passed from node(express) file-->
+      </div>
+      <div class="modal-body">
+        <img src="../public/room.jpg" style="width: 100%;border-radius: 0 30px;">
+        <table class="table">
+          <tr>
+            <td><h3 style="color: #5DADE2;">Room Name</h3></td>
+          </tr>
+          <tr>
+            <td style="color: #58D68D;">THIS IS DUMMY DESCRIPTION:-Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+          </tr>
+        </table>
+        <table class="table">
+          <tr>
+            <td>Type</td>
+            <td>Double</td>
+          </tr>
+          <tr>
+            <td>Seating Capacity</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Available Dates</td>
+            <td>12/06/2018 - 27/07/2018</td>
+          </tr>
+          <tr>
+            <td>Amenities</td>
+            <td>Wifi Bar</td>
+          </tr>
+          <tr>
+            <td>Charges per day</td>
+            <td>10000</td>
+          </tr>
+        </table>
+        <center><button class="btn" style="background: none;color: blue;" data-target = "#TC" data-toggle = "modal">*Terms and Conditions Applied*</button></center>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="TC" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #E74C3C;color: white;">
+        <h4 class="modal-title">Terms And Conditions</h4><!-- passed from node(express) file-->
+      </div>
+      <div class="modal-body">
+        <ol class="list-group">
+          <li class="list-group-item">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </li>
+          <li class="list-group-item">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+          <li class="list-group-item">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</li>
+          <li class="list-group-item">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</li>
+        </ol>
       </div>
     </div>
   </div>

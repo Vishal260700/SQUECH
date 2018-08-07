@@ -72,7 +72,7 @@
       <td>26/07/2018</td>
       <td>Yes</td>
       <td>ABCDEFGHI</td>
-      <td><button class="btn" style="background: #3498DB;margin-right: 5px;">Edit</button><button class="btn btn-danger" style="margin-right: 5px;">Delete</button></td>
+      <td><button class="btn" style="background: #3498DB;margin-right: 5px;">Edit</button><button class="btn btn-danger" style="margin-right: 5px;" data-target = "#Code" data-toggle = "modal">Delete</button></td>
     </tr>
     </table>
   </div>
@@ -88,13 +88,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header" style="background: #3498DB;color: white;">
-        <h4 class="modal-title">Add Room</h4>
+        <h4 class="modal-title">New Code</h4>
       </div>
       <div class="modal-body">
         <form action="#" method="post">
           <table class="table"><!--Schema for name are "a" + "attribute of code" -->
             <tr>
-              <td>Refferal Code Name</td>
+              <td>Coupon Code Name</td>
               <td><input type="text" name="aname"></td>
             </tr>
             <tr>
@@ -115,6 +115,26 @@
             </tr>
           </table>
           <button type="submit" class="btn btn-block" style="background: #58D68D;color: white;">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal ends here-->
+
+<!-- Delete Starts here -- >
+
+<div id="delete" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3498DB;color: white;">
+        <h4 class="modal-title">New Code</h4>
+      </div>
+      <div class="modal-body">
+        <h3>You Sure to Delete This Code.</h3>
+        <form action="#" method="post">
+          <button type="Submit" class="btn btn-danger">Go Ahead!</button>
         </form>
       </div>
     </div>
